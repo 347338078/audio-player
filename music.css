@@ -1,0 +1,149 @@
+span{
+    display:inline-block;
+}
+
+song{
+    color: red;
+    cursor: pointer;
+}
+/*总时间*/
+.total-time {
+    position: relative;
+    left: 347px;
+    top: 14px;
+}
+/*当前时间*/
+.now-time {
+    position: relative;
+    left: -163px;
+    top: 14px;
+}
+/*时间进度条*/
+.progress {
+    position: absolute;
+    left: -115px;
+    width: 501px;
+    top: 11px;
+    z-index: 1;
+    opacity: 0;
+}
+/*时间父元素 div*/
+.audio-time-input {
+    position: absolute;
+    top: 819px;
+    left: 195px;
+}
+
+/*歌单列表*/
+.play-list {
+    position: absolute;
+    top: 839px;
+    display: none;
+}
+/*audio 父元素*/
+.audio-player {
+    position: absolute;
+    top: 888px;
+    left: 142px
+}
+/*专辑图*/
+.images-music {
+    position: absolute;
+    top: 239px;
+    left: 71px;
+}
+/*歌单*/
+.images-menu {
+    position: absolute;
+    top: 1068px;
+    left: 300px;
+}
+/*随机播放*/
+.images-random {
+    position: absolute;
+    top: 1061px;
+    left: 52px;
+}
+/*列表循环*/
+.images-circulation {
+    position: absolute;
+    top: 1061px;
+    left: 528px;
+}
+/*单曲循环*/
+.pattern {
+    display: none;
+}
+/*时间滑条背景*/
+.images-progress {
+    position: absolute;
+    left: -127px;
+}
+/*移动端置顶图标*/
+.images-bar {
+    position: absolute;
+    top: 0;
+}
+/*时间滑条填充*/
+.images-progress-finish {
+    position: absolute;
+    margin-left: -125px;
+    overflow: hidden;
+    top: 3px;
+    height: 33px;
+    width: 11px;
+}
+/*时间滑条圆点*/
+.images-progress-bar {
+    position: absolute;
+    top: 6px;
+    left: -125px;
+}
+/*音量调节器*/
+.volume {
+    position: absolute;
+    top: 18px;
+    left: -115px;
+    width: 463px;
+    z-index: 1;
+    opacity: 0;
+}
+/*音量最小化*/
+.volume-reduce {
+    position: absolute;
+    top: 8px;
+    left: -149px;
+}
+/*音量最大化*/
+.volume-add {
+    position: absolute;
+    top: 9px;
+    left: 359px;
+}
+/*音量滑条背景*/
+.images-volume-least {
+    position: absolute;
+    left: -142px;
+    top: 0;
+}
+/*音量滑条 div*/
+.volume-parent {
+    position: absolute;
+    top: 103px;
+    left: 209px;
+}
+/*音量滑条填充*/
+.images-volume-max {
+    position: absolute;
+    overflow: hidden;
+    top: 11px;
+    left: -145px;
+    height: 23px;
+    width: 492px;
+}
+/*音量圆点图标*/
+.images-volume-bar {
+    position: absolute;
+    top: 8px;
+    margin-left: 322px;
+}

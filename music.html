@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>音乐播放器</title>
+        <link rel="stylesheet" href="music.css">
+    </head>
+    <body>
+        <!-- 背景图 -->
+        <div class="">
+            <img class='images-bar' src="images/bar.png">
+            <img src="images/background.jpg">
+        </div>
+        <!-- 音量 滑条  -->
+        <div class="volume-parent">
+            <img class="volume-reduce" src="images/volume-.png">
+            <input class='volume' type="range" value="100">
+            <!-- 背景 -->
+            <img class='images-volume-least' src="images/volume-least.png">
+            <!-- 填充 -->
+            <div class="images-volume-max">
+                <img class='images-volume-max-picture' src="images/volume-max.png">
+            </div>
+            <!-- 圆点 -->
+            <img class='images-volume-bar' src="images/volume-bar.png">
+            <img class="volume-add" src="images/volume+.png">
+        </div>
+        <img class='images-music' src="images/music.png">
+        <!-- 时间 滑条 -->
+        <div class="audio-time-input">
+            <span class="now-time">00:00</span>
+            <input class='progress' type="range" value="0">
+            <!-- 背景 -->
+            <img class='images-progress' src="images/progress.png">
+            <!-- 填充 -->
+            <div class="images-progress-finish">
+                <img class='images-progress-finish-pictrue' src="images/progress-finish.png">
+            </div>
+            <!-- 圆点 -->
+            <img class='images-progress-bar' src="images/progress-bar.png">
+            <span class="total-time">00:00</span>
+        </div>
+        <div class="audio-player">
+            <audio id='id-audio-player'>
+                <source class='song' src="0.mp3">
+            </audio >
+            <button class='pattern'>单曲循环</button>
+            <!-- 上一首 按钮 -->
+            <img class="top" src="images/Previous.png">
+            <!-- 播放 按钮 -->
+            <img class="play" src="images/play.png">
+            <!-- 下一首 按钮 -->
+            <img  class="next" src="images/next.png">
+        </div>
+        <div class="">
+            <!-- 歌单  -->
+            <img class='images-menu' src="images/menu.png">
+            <!-- 随机播放 -->
+            <img class='images-random' src="images/random.png">
+            <!-- 列表循环 -->
+            <img class='images-circulation' src="images/circulation.png">
+        </div>
+        <!-- 歌单  -->
+        <div class="play-list">
+                <ul>
+                    <li>
+                        <song>0.mp3</song>
+                    </li>
+                    <li>
+                        <song>1.mp3</song>
+                    </li>
+                    <li>
+                        <song>2.mp3</song>
+                    </li>
+                </ul>
+        </div>
+        <script src='music.js'></script>
+    </body>
+</html>

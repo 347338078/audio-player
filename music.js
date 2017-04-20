@@ -33,9 +33,9 @@ var a = e('#id-audio-player')
 var bindPlay = function() {
     var play = e('.play')
     play.addEventListener('click', function() {
-        console.log('click');
+        // console.log('click');
         if (a.paused) {
-            console.log('123');
+            // console.log('123');
             play.setAttribute('src', 'images/pause.png')
             a.play()
         }else {
@@ -257,7 +257,7 @@ var bindNowTime = function() {
     })
 }
 
-// 当歌曲已加载完成时 调用 duration 函数
+// 当歌曲已加载完成时 调用 duration 函数 获得总时长
 var bindTotalTime = function() {
     bindEvent(a, 'loadedmetadata', duration)
 }
@@ -267,6 +267,7 @@ var progressBar = function() {
     var progress = e('.progress')
     progress.value = a.currentTime / a.duration * 100
 }
+
 
 var bindProgressBar = function() {
     bindEvent(a, 'timeupdate', progressBar)
@@ -278,6 +279,7 @@ var setTimeInput = function() {
     a.currentTime = progress.value * a.duration / 100
 }
 
+// input 改变时
 var bindsetTimeInput = function() {
     var progress = e('.progress')
     bindEvent(progress, 'input', function() {
@@ -323,7 +325,7 @@ var setVloumeInputProgress = function() {
     var img = e('.images-volume-max')
     img.style.cssText = `width:${len}px;`
 }
-// input 改变是 圆点 填充条 跟着改变
+// input 改变时 圆点 填充条 跟着改变
 var bindChangeVloume = function() {
     var volume = e('.volume')
     bindEvent(volume, 'input', function() {
@@ -334,18 +336,27 @@ var bindChangeVloume = function() {
 
 
 var _mian = function(){
+    // 监听播放/暂停按钮
     bindPlay()
+    // 点击歌单 切换歌曲
     bindlister()
+    // 下一首 按钮
     bindNextMusic()
+    // 上一首 按钮
     bindTopMusic()
+    // 播放时间改变时 调用
     bindNowTime()
+    // 歌曲加载完成后 获得总时长
     bindTotalTime()
+    // 播放模式切换
     bindpattern()
     bindProgressBar()
     bindsetTimeInput()
     bindSetVolume()
     bindVolume()
     bindChangeVloume()
+    // 默认列表循环播放模式
+    listPlay()
 }
 
 _mian()

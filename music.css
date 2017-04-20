@@ -9,14 +9,14 @@ song{
 /*总时间*/
 .total-time {
     position: relative;
-    left: 347px;
-    top: 14px;
+    left: 318px;
+    top: 11px;
 }
 /*当前时间*/
 .now-time {
     position: relative;
-    left: -163px;
-    top: 14px;
+    left: -179px;
+    top: 11px;
 }
 /*时间进度条*/
 .progress {
